@@ -1,0 +1,12 @@
+---
+- hosts: 127.0.0.1 
+  sudo: yes
+  tasks:
+    - name: add a new user
+      user: name=muranaka
+      
+    - name: muranaka ユーザに sudo 権限を付与
+      lineinfile:
+       dest: /etc/sudoers
+       backup: yes
+       line: 'muranaka ALL=(ALL) NOPASSWD: ALL'

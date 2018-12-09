@@ -1,0 +1,15 @@
+・サーバ構築
+[root@localhost ~]# cat /etc/redhat-release
+CentOS Linux release 7.6.1810 (Core)
+[root@localhost ~]#
+
+・muranaka user 作成
+[root@localhost ~]# grep muranaka /etc/passwd
+muranaka:x:1001:1001::/home/muranaka:/bin/bash
+[root@localhost ~]#
+
+・ローカルからssh接続
+07:32:28 ~/Desktop/Menta_tool/vagrant_ansible $ ssh -p 2222 muranaka@127.0.0.1
+Last login: Thu Dec  6 07:28:37 2018 from 10.0.2.2
+Welcome to your Vagrant-built virtual machine.
+[muranaka@localhost ~]$
